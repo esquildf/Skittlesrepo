@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+<div id="header" style="background-color:#0000FF;">
+<h2 style="margin-bottom:0;">Skittle's MPG to KPL Converter</h2></div>
+</title>
+<center>
+<div id="header" style="background-color:#ABCDEF;">
+<h2 style="margin-bottom:0;font-size:25px;color:black">Skittle's MPG to KPL Converter</h2></div> 
+</center>
+</head>
+<body bgcolor="#111111">
+<center>
+<form Name="thing">
+MPG<input type="text" name="mpg" size="12" value="">
+<input type="button" value="Convert!" style="font-family:aharoni;color:purple;font-size:20px" onclick="mpgtokpl();">
+KPL<input type="text" ID="result" name="fattymcfatfat" size="12" value="">
+</form>
+
+<BR>
+
+<form Name="mcstuff">
+KPL<input type="text" name="kpl" size="12" value="">
+<input type="button" value="Convert!" style="font-family:aharoni;color:gold;font-size:20px" onclick="kpltompg();">
+MPG<input type="text" ID="result2" name="spinningwheels" size="12" value="">
+</form>
+<BR>
+<div style="background-color:#00000F;height:40px;width:100%">
+<BR>
+<BR>
+<img src="http://www.tabootshirts.com/wp-content/uploads/2012/03/skittles.jpg">
+</center>
+
+<script language="JavaScript">
+function mpgtokpl() 
+	{
+		var mpg = document.thing.mpg.value; 
+		var mpgconstant = 0.425144;
+		var kplresult;
+			
+		kplresult = (parseFloat(mpg) * mpgconstant).toFixed(4);
+		
+		document.getElementById('result').value = kplresult;
+	}
+
+function kpltompg()
+	{
+		var kpl = document.mcstuff.kpl.value;
+		var kplconstant = 2.35215;
+		var mpgresult;
+		
+		mpgresult = (parseFloat(kpl) * kplconstant).toFixed(4);
+		
+		document.getElementById('result2').value = mpgresult;
+	}
+</script>
+
+</body>
+
+</html>
